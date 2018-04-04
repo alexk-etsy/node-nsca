@@ -1,6 +1,9 @@
 {
-  "dependencies": {
-    "buffer-crc32": "latest",
-    "mcrypt": "latest"
-  }
+    "name": "node-nsca",
+    "description": "Bare-bones nodejs Nagios NSCA client",
+    "version": "0.0.1",
+    "dependencies": {
+        "buffer-crc32": "latest",
+        "mcrypt": "latest"
+    }
 }
