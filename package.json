@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "buffer-crc32": "latest",
+    "mcrypt": "latest"
+  }
+}
