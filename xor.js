@@ -56,11 +56,13 @@ XorEncoder.prototype.encrypt = function(buffer) {
     };
 
     var valueChars = charArray(value);
-    var repeatedPassChars = charArray(repeatString(this.key, value));
+    if (this.key) {
+        var repeatedPassChars = charArray(repeatString(this.key, value));
+        var valueChars = xorArrays(valueChars, repeatedPassChars);
+    }
     var repeatedIVChars = charArray(repeatString(this.iv, value));
 
-    var pre = xorArrays(valueChars, repeatedIVChars);
-    var post = xorArrays(pre, repeatedPassChars);
+    var post = xorArrays(valueChars, repeatedIVChars);
 
     return  joinCharCodes(post);
 }
