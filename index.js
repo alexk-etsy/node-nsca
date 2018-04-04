@@ -74,4 +74,4 @@ Notifier.prototype.send = function(hostName, serviceDesc, returnCode, pluginOutp
 
 
 
-module.exports = Notifier;
+module.exports.Notifier = Notifier;
